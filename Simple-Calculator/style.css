@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.calc {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 24px;
+  width: 320px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+}
+
+.display {
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 16px;
+  padding: 20px 16px 12px;
+  margin-bottom: 20px;
+  text-align: right;
+  min-height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.expr {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 13px;
+  min-height: 18px;
+  margin-bottom: 6px;
+  word-break: break-all;
+}
+
+.result {
+  color: #fff;
+  font-size: 36px;
+  font-weight: 300;
+  letter-spacing: -1px;
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  border: none;
+  border-radius: 14px;
+  font-size: 18px;
+  height: 62px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-weight: 500;
+  outline: none;
+}
+
+button:active {
+  transform: scale(0.93);
+}
+
+.btn-num {
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.btn-num:hover {
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.btn-op {
+  background: rgba(99, 102, 241, 0.3);
+  color: #a5b4fc;
+  border: 1px solid rgba(99, 102, 241, 0.3);
+}
+
+.btn-op:hover {
+  background: rgba(99, 102, 241, 0.5);
+  color: #fff;
+}
+
+.btn-eq {
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: #fff;
+  border: none;
+  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4);
+}
+
+.btn-eq:hover {
+  box-shadow: 0 4px 28px rgba(99, 102, 241, 0.7);
+}
+
+.btn-clear {
+  background: rgba(239, 68, 68, 0.2);
+  color: #fca5a5;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.btn-clear:hover {
+  background: rgba(239, 68, 68, 0.4);
+  color: #fff;
+}
+
+.btn-special {
+  background: rgba(255, 255, 255, 0.07);
+  color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  font-size: 15px;
+}
+
+.btn-special:hover {
+  background: rgba(255, 255, 255, 0.14);
+  color: #fff;
+}
+
+.span2 {
+  grid-column: span 2;
+}
